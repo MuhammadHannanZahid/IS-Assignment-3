@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Main Container */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #1e1e2f;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+    color: #4db8ff;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    border-bottom: 2px solid #2a2a40;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+h3 {
+    color: #a0a0b5;
+    margin: 20px 0 10px;
+    font-size: 1.2rem;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #2a2a40;
+    margin: 40px 0;
+}
+
+/* Inputs and Buttons */
+input[type="text"], select {
+    padding: 10px 15px;
+    margin: 5px;
+    border: 1px solid #3a3a55;
+    border-radius: 5px;
+    background-color: #2a2a40;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #4db8ff;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4db8ff;
+    color: #121212;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #3aa3e0;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Scanner Section */
+.scanner {
+    margin-bottom: 20px;
+}
+
+#targetIp {
+    width: 300px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #2a2a40;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #3a3a55;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #3a3a55;
+}
+
+th {
+    color: #4db8ff;
+    font-weight: 600;
+}
+
+tbody tr:hover {
+    background-color: #32324a;
+}
+
+/* Firewall Section */
+.rule-inputs, .simulator-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    background-color: #2a2a40;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+#rulesList {
+    list-style-type: none;
+    background-color: #2a2a40;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    min-height: 50px;
+}
+
+#rulesList li {
+    padding: 8px 12px;
+    border-bottom: 1px solid #3a3a55;
+    font-family: monospace;
+    font-size: 1.1rem;
+}
+
+#rulesList li:last-child {
+    border-bottom: none;
+}
+
+/* Flow Diagram / Result Box */
+.flow-box {
+    background-color: #121212;
+    border: 1px solid #3a3a55;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-family: monospace;
+    font-size: 1.2rem;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

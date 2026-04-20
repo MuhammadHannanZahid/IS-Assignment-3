@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Network Security Scanner & Firewall Visualizer</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Network Security Dashboard</h1>
+        
+        <section class="scanner">
+            <h2>Network Scanner</h2>
+            <input type="text" id="targetIp" placeholder="Target IP or Hostname (e.g., 127.0.0.1)">
+            <select id="scanType">
+                <option value="TCP SYN">TCP SYN Scan</option>
+                <option value="Full Connect">Full Connect Scan</option>
+                <option value="UDP">UDP Scan</option>
+            </select>
+            <button onclick="startScan()">Start Scan</button>
+            
+            <table id="resultsTable">
+                <thead>
+                    <tr>
+                        <th>IP</th>
+                        <th>Port</th>
+                        <th>Protocol</th>
+                        <th>Service</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="resultsBody">
+                    </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <section class="firewall">
+            <h2>Firewall Simulator</h2>
+            <div class="rule-inputs">
+                <select id="fwAction">
+                    <option value="ALLOW">ALLOW</option>
+                    <option value="DENY">DENY</option>
+                </select>
+                <input type="text" id="fwIp" placeholder="IP (or * for any)">
+                <input type="text" id="fwPort" placeholder="Port (or * for any)">
+                <select id="fwProto">
+                    <option value="ANY">ANY</option>
+                    <option value="TCP">TCP</option>
+                    <option value="UDP">UDP</option>
+                </select>
+                <button onclick="addRule()">Add Rule</button>
+            </div>
+            
+            <h3>Active Rules (Priority Order)</h3>
+            <ul id="rulesList"></ul>
+
+            <h3>Traffic Simulator</h3>
+            <div class="simulator-inputs">
+                <input type="text" id="simIp" placeholder="Test IP">
+                <input type="text" id="simPort" placeholder="Test Port">
+                <select id="simProto">
+                    <option value="TCP">TCP</option>
+                    <option value="UDP">UDP</option>
+                </select>
+                <button onclick="simulateTraffic()">Simulate Traffic</button>
+            </div>
+            
+            <div id="flowDiagram" class="flow-box">
+                <p>Traffic Flow Result will appear here.</p>
+            </div>
+        </section>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
