@@ -11,10 +11,10 @@ A web-based educational and diagnostic tool designed to bridge fundamental netwo
 
 ## Features
 
-- ** Active Network Scanning:** Perform TCP SYN, Full Connect, and UDP scans to discover open ports and running services using the Nmap engine.
-- ** Firewall Simulator:** Build custom Allow/Deny rulesets based on Source IP, Port, and Protocol.
-- ** Visual Traffic Flow:** Simulate incoming packets and visualize whether they are permitted or blocked by your active firewall rules.
-- ** Dark-Themed UI:** A sleek, responsive, cybersecurity-inspired dashboard interface.
+- Active Network Scanning:** Perform TCP SYN, Full Connect, and UDP scans to discover open ports and running services using the Nmap engine.
+- Firewall Simulator:** Build custom Allow/Deny rulesets based on Source IP, Port, and Protocol.
+- Visual Traffic Flow:** Simulate incoming packets and visualize whether they are permitted or blocked by your active firewall rules.
+- Dark-Themed UI:** A sleek, responsive, cybersecurity-inspired dashboard interface.
 
 ---
 
@@ -71,20 +71,17 @@ net-sec-project/
     ├── style.css          # Dark-theme styling and CSS layout
     └── script.js          # API calls and frontend logic
 ```
-##How to Use
+## How to Use
 1. The Network Scanner
-Enter a target IP address (e.g., 127.0.0.1 or your router's IP like 192.168.1.1).
-
-Select the type of scan you wish to perform from the dropdown.
-
-Click Start Scan. Results will populate in the table below, showing discovered ports, protocols, and services.
+* Enter a target IP address (e.g., 127.0.0.1 or your router's IP like 192.168.1.1).
+* Select the type of scan you wish to perform from the dropdown.
+* Click Start Scan. Results will populate in the table below, showing discovered ports, protocols, and services.
 
 2. The Firewall Simulator
-Add Rules: Use the Rule Inputs section to define what traffic to ALLOW or DENY. You can use specific IPs and Ports, or use * as a wildcard for "Any".
+* Add Rules: Use the Rule Inputs section to define what traffic to ALLOW or DENY. You can use specific IPs and Ports, or use * as a wildcard for "Any".
+* Simulate Traffic: Enter test IP, Port, and Protocol details into the Traffic Simulator section.
+* Observe Flow: Click Simulate Traffic to see a visual diagram indicating if the packet was successfully routed or dropped based on your priority rules.
 
-Simulate Traffic: Enter test IP, Port, and Protocol details into the Traffic Simulator section.
+## Disclaimer & Ethical Use
 
-Observe Flow: Click Simulate Traffic to see a visual diagram indicating if the packet was successfully routed or dropped based on your priority rules.
-
-##Disclaimer & Ethical Use
 This tool is strictly for educational purposes and authorized auditing. Never scan a network, IP address, or device for which you do not have explicit permission. Unauthorized network scanning can be perceived as an attack and may violate local laws or your Internet Service Provider's Terms of Service. Always test responsibly on your local loopback address (127.0.0.1) or a dedicated lab environment.
